@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="css/output.css">
     <link rel="stylesheet" href="css/flip.css">
+    <script src="js/script.js" defer></script>
+    
 </head>
 <body class="min-h-screen bg-flash-gray ">
     <header class="w-full bg-white py-3 flex justify-center">
@@ -21,7 +23,7 @@
                 <div class="flip-card h-full">
                     <div class="flip-card-inner h-full flex flex-col items-center">
 
-                        <div class="flip-card-front w-6/8 md:w-4/8 flip-card shadow-lg bg-white p-8 rounded-2xl">
+                        <div id="card-front" class="flip-card-front w-6/8 md:w-4/8 flip-card shadow-lg bg-white p-8 rounded-2xl">
                             <section class="font-semibold text-sm text-flash-front mb-30">
                                 <p>
                                     Frente
@@ -44,7 +46,7 @@
                             </section>
                         </div>
 
-                        <div class="flip-card-back w-6/8 md:w-4/8 flip-card shadow-lg bg-flash-blue p-8 rounded-2xl">
+                        <div id="card-back" class="flip-card-back w-6/8 md:w-4/8 flip-card shadow-lg bg-flash-blue p-8 rounded-2xl">
                             <section class="font-semibold text-sm text-flash-front mb-30">
                                 <p>
                                     Verso
