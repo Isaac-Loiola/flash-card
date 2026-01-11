@@ -15,3 +15,23 @@ frontCard.addEventListener('click', () => {
 backCard.addEventListener('click', () => {
     style.innerHTML = '';
 })
+
+// -----------
+
+// second step - add sound when click in button
+
+const player = document.createElement('audio');
+player.src = 'audio/0001.mp3';
+
+const btnAudioFront = document.getElementById('audio-front');
+const btnAudioBack = document.getElementById('audio-back');
+
+btnAudioFront.addEventListener('click', () => {
+    player.play();
+});
+
+
+btnAudioBack.addEventListener('click', () => {
+    player.play();
+});
+
