@@ -32,6 +32,7 @@ const imgCardFront = document.getElementById('img-card-front');
 
 btnAudioFront.addEventListener('click', () => {
     event.stopPropagation();
+    imgCardBack.src = 'image/pause-1-svgrepo-com.svg';
     imgCardFront.src = 'image/pause-1-svgrepo-com.svg';
     player.play();
 });
@@ -46,5 +47,6 @@ player.addEventListener('ended', () => {
 btnAudioBack.addEventListener('click', () => {
     event.stopPropagation();
     imgCardBack.src = 'image/pause-1-svgrepo-com.svg';
+    imgCardFront.src = 'image/pause-1-svgrepo-com.svg';
     player.play();
 });
