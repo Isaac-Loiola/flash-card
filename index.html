@@ -25,22 +25,22 @@
         <div class="w-full  md:w-2/4 bg-white rounded-3xl px-5 py-10 md:p-12">
             <h1 class="font-inter font-bold text-2xl md:text-3xl text-flash-blue">Flash Card</h1>
             <p class="text-sm text-flash-description font-semibold mb-15">Dinâmica para memorização</p>
-            <div class="border border-flash-border rounded-sm h-250 py-45">
+            <div class="border border-flash-border rounded-sm h-220 py-20">
 
-                <div class="h-full flip-card swiper">
-                    <div class="h-full swiper-wrapper">
-                        <!-- cards -->
-                        <div class="swiper-slide py-10">
-                             <div class="flip-card-inner h-full w-full flex flex-col items-center">
-                                 <div id="card-front" class="flip-card-front w-6/8 md:w-4/8 flip-card shadow-lg bg-white p-8 rounded-2xl">
+                <div class="h-162  flip-card swiper">
+                    <div class="swiper-wrapper">
+                            <!-- cards -->
+                        <div class="swiper-slide pt-15">
+                             <div value="0" class="flip-card-inner w-full flex flex-col items-center">
+                                 <div id="card-front" class="flip-card-front w-6/8 md:w-5/8 flip-card shadow-lg bg-white p-8 rounded-2xl">
                                      <section class="font-semibold text-sm text-flash-front mb-30">
                                          <p>
                                              Frente
                                          </p>
                                      </section>
-                                     <section class="content mb-30 ">
-                                         <p class="text-flash-pink font-bold text-2xl"> 
-                                             Do you want water ?
+                                     <section class="content mb-25 ">
+                                         <p class="text-flash-pink font-bold text-2xl w-full"> 
+                                             Do you want water
                                          </p>
                                      </section>
                                      <section class="audio flex justify-center mb-10">
@@ -55,7 +55,7 @@
                                      </section>
                                  </div>
          
-                                 <div id="card-back" class="flip-card-back w-6/8 md:w-4/8 flip-card shadow-lg bg-flash-blue p-8 rounded-2xl">
+                                 <div id="card-back" class="flip-card-back w-6/8 md:w-5/8 flip-card shadow-lg bg-flash-blue p-8 rounded-2xl">
                                      <section class="font-semibold text-sm text-flash-front mb-30">
                                          <p>
                                              Verso
@@ -63,12 +63,12 @@
                                      </section>
                                      <div class="flex flex-col gap-2">
                                          <section class="content">
-                                             <p class="text-flash-description font-bold text-md"> 
+                                             <p class="text-flash-description font-bold text-md w-full"> 
                                                  Do you want water ?
                                              </p>
                                          </section>
-                                         <section class="content mb-30">
-                                             <p class="text-white font-bold text-2xl"> 
+                                         <section class="content mb-25">
+                                             <p class="text-white font-bold text-2xl w-full"> 
                                                  Você quer agua ?
                                              </p>
                                          </section>
@@ -87,8 +87,8 @@
                              </div>
                         </div>
                         <div class="swiper-slide py-10">
-                             <div class="flip-card-inner h-full w-full flex flex-col items-center">
-                                 <div id="card-front" class="flip-card-front w-6/8 md:w-4/8 flip-card shadow-lg bg-white p-8 rounded-2xl">
+                             <div class="flip-card-inner w-full flex flex-col items-center">
+                                 <div id="card-front" class="flip-card-front w-6/8 md:w-5/8 flip-card shadow-lg bg-white p-8 rounded-2xl">
                                      <section class="font-semibold text-sm text-flash-front mb-30">
                                          <p>
                                               Frente
@@ -111,7 +111,7 @@
                                      </section>
                                  </div>
              
-                                 <div id="card-back" class="flip-card-back w-6/8 md:w-4/8 flip-card shadow-lg bg-flash-blue p-8 rounded-2xl">
+                                 <div id="card-back" class="flip-card-back w-6/8 md:w-5/8 flip-card shadow-lg bg-flash-blue p-8 rounded-2xl">
                                      <section class="font-semibold text-sm text-flash-front mb-30">
                                          <p>
                                              Verso
@@ -144,14 +144,15 @@
                         </div>
                     <!-- end list cards  -->
                     </div>
-                    <div class="swiper-pagination"></div>
-
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
                 </div>
-
+                <div id="container-buttons" class=" hidden button opacity-0 transition-opacity duration-500 flex justify-center gap-10">
+                    <button name="good" value="1" class="ingles-level bg-flash-blue flex font-inter md:text-lg items-center font-semibold gap-2 text-white px-6 py-3 hover:scale-103 hover:bg-flash-blur-hover duration-300 rounded-4xl">
+                        <img src="image/icons/face-smile.svg" alt="smile-face" class="w-7"> Bom
+                    </butt>
+                    <button name="bad" value="0" class="ingles-level bg-flash-blue flex font-inter md:text-lg items-center font-semibold gap-2 text-white px-6 py-3 hover:scale-103 hover:bg-flash-blur-hover duration-300 rounded-4xl">
+                        <img src="image/icons/face-frown.svg" alt="smile-face" class="w-7"> Putz!
+                    </button>
+                </div>
             </div>
         </div>        
     </main>

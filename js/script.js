@@ -4,6 +4,8 @@ const style = document.createElement("style");
 style.type = "text/css";
 
 
+const containerBTN = document.getElementById('container-buttons');
+
 const frontCard = document.getElementById('card-front');
 const backCard = document.getElementById('card-back');
 
@@ -13,9 +15,19 @@ player.src = 'audio/0001.mp3';
 frontCard.addEventListener('click', () => {
     style.innerHTML = '.flip-card .flip-card-inner{ transform: rotateY(-180deg);} ';
     document.getElementsByTagName('head')[0].appendChild(style);
+    containerBTN.classList.remove('hidden');
+    setTimeout(() => {
+        containerBTN.classList.remove('opacity-0')
+        containerBTN.classList.add('opacity-100')
+    }, 5);
 });
 
 backCard.addEventListener('click', () => {
+    setTimeout(() => {
+        containerBTN.classList.remove('opacity-100')
+        containerBTN.classList.add('opacity-0')
+        containerBTN.classList.remove('hidden');
+    }, 1);
     style.innerHTML = '';
 })
 
@@ -63,8 +75,8 @@ const swiper = new Swiper('.swiper', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.ingles-level',
+    // prevEl: '.swiper-button-prev',
   },
 
 });
