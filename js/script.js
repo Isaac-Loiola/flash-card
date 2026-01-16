@@ -15,7 +15,7 @@ player.src = 'audio/0001.mp3';
 frontCard.addEventListener('click', () => {
     style.innerHTML = '.flip-card .flip-card-inner{ transform: rotateY(-180deg);} ';
     document.getElementsByTagName('head')[0].appendChild(style);
-    containerBTN.classList.remove('hidden');
+    containerBTN.hidden = false;
     setTimeout(() => {
         containerBTN.classList.remove('opacity-0')
         containerBTN.classList.add('opacity-100')
@@ -26,8 +26,8 @@ backCard.addEventListener('click', () => {
     setTimeout(() => {
         containerBTN.classList.remove('opacity-100')
         containerBTN.classList.add('opacity-0')
-        containerBTN.classList.remove('hidden');
     }, 1);
+    containerBTN.hidden = true;
     style.innerHTML = '';
 })
 
