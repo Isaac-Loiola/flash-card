@@ -1,10 +1,10 @@
 .flip-card-inner{
     position: relative;
-    transition: transform 0.4s;
+    transition: transform 0.5s;
     transform-style: preserve-3d ;
 }
 
-.flip-card, .swiper-wrapper{
+.flip-card, .swiper-slide{
     perspective: 1500px;
 }
 
