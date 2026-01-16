@@ -78,5 +78,6 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.ingles-level',
     // prevEl: '.swiper-button-prev',
   },
+  allowTouchMove: false
 
 });
