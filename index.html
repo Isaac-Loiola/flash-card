@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="css/output.css">
     <link rel="stylesheet" href="css/flip.css">
     <script src="js/script.js" defer></script>
+
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     
 </head>
 <body class="min-h-screen bg-flash-gray ">
@@ -20,67 +27,129 @@
             <p class="text-sm text-flash-description font-semibold mb-15">Dinâmica para memorização</p>
             <div class="border border-flash-border rounded-sm h-250 py-45">
 
-                <div class="flip-card h-full">
-                    <div class="flip-card-inner h-full flex flex-col items-center">
-
-                        <div id="card-front" class="flip-card-front w-6/8 md:w-4/8 flip-card shadow-lg bg-white p-8 rounded-2xl">
-                            <section class="font-semibold text-sm text-flash-front mb-30">
-                                <p>
-                                    Frente
-                                </p>
-                            </section>
-                            <section class="content mb-30 ">
-                                <p class="text-flash-pink font-bold text-2xl"> 
-                                    Do you want water ?
-                                </p>
-                            </section>
-                            <section class="audio flex justify-center mb-10">
-                                <div id="audio-front" class="button-audio p-4 bg-flash-pink rounded-full">
-                                    <img src="image/play-1003-svgrepo-com (1).svg" alt="" class="w-7 pr" id="img-card-front">
+                <div class="h-full flip-card swiper">
+                    <div class="h-full py-10 swiper-wrapper">
+                        <!-- cards -->
+                            <div class="flip-card-inner h-full w-full flex flex-col items-center swiper-slide">
+                                <div id="card-front" class="flip-card-front w-6/8 md:w-4/8 flip-card shadow-lg bg-white p-8 rounded-2xl">
+                                    <section class="font-semibold text-sm text-flash-front mb-30">
+                                        <p>
+                                            Frente
+                                        </p>
+                                    </section>
+                                    <section class="content mb-30 ">
+                                        <p class="text-flash-pink font-bold text-2xl"> 
+                                            Do you want water ?
+                                        </p>
+                                    </section>
+                                    <section class="audio flex justify-center mb-10">
+                                        <div id="audio-front" class="button-audio p-4 bg-flash-pink rounded-full">
+                                            <img src="image/play-1003-svgrepo-com (1).svg" alt="" class="w-7 pr" id="img-card-front">
+                                        </div>
+                                    </section>
+                                    <section class="flex justify-end font-semibold text-sm text-flash-front">
+                                        <p>
+                                            Inglês
+                                        </p>
+                                    </section>
                                 </div>
-                            </section>
-                            <section class="flex justify-end font-semibold text-sm text-flash-front">
-                                <p>
-                                    Inglês
-                                </p>
-                            </section>
-                        </div>
-
-                        <div id="card-back" class="flip-card-back w-6/8 md:w-4/8 flip-card shadow-lg bg-flash-blue p-8 rounded-2xl">
-                            <section class="font-semibold text-sm text-flash-front mb-30">
-                                <p>
-                                    Verso
-                                </p>
-                            </section>
-                            <div class="flex flex-col gap-2">
-                                <section class="content">
-                                    <p class="text-flash-description font-bold text-md"> 
-                                        Do you want water ?
-                                    </p>
-                                </section>
-                                <section class="content mb-30">
-                                    <p class="text-white font-bold text-2xl"> 
-                                        Você quer agua ?
-                                    </p>
-                                </section>
+        
+                                <div id="card-back" class="flip-card-back w-6/8 md:w-4/8 flip-card shadow-lg bg-flash-blue p-8 rounded-2xl">
+                                    <section class="font-semibold text-sm text-flash-front mb-30">
+                                        <p>
+                                            Verso
+                                        </p>
+                                    </section>
+                                    <div class="flex flex-col gap-2">
+                                        <section class="content">
+                                            <p class="text-flash-description font-bold text-md"> 
+                                                Do you want water ?
+                                            </p>
+                                        </section>
+                                        <section class="content mb-30">
+                                            <p class="text-white font-bold text-2xl"> 
+                                                Você quer agua ?
+                                            </p>
+                                        </section>
+                                    </div>
+                                    <section class="audio flex justify-center mb-10">
+                                        <div id="audio-back" class="button-audio p-4 bg-flash-pink rounded-full">
+                                            <img src="image/play-1003-svgrepo-com (1).svg" alt="" class="w-7 pr" id="img-card-back">
+                                        </div>
+                                    </section>
+                                    <section class="flex justify-end font-semibold text-sm text-flash-front">
+                                        <p>
+                                            Português
+                                        </p>
+                                    </section>
+                                </div>
                             </div>
-                            <section class="audio flex justify-center mb-10">
-                                <div id="audio-back" class="button-audio p-4 bg-flash-pink rounded-full">
-                                    <img src="image/play-1003-svgrepo-com (1).svg" alt="" class="w-7 pr" id="img-card-back">
-                                </div>
-                            </section>
-                            <section class="flex justify-end font-semibold text-sm text-flash-front">
-                                <p>
-                                    Português
-                                </p>
-                            </section>
-                        </div>
-                         
-                    </div>
 
-                    
+                            <div class="flip-card-inner h-full w-full flex flex-col items-center swiper-slide">
+        
+                                <div id="card-front" class="flip-card-front w-6/8 md:w-4/8 flip-card shadow-lg bg-white p-8 rounded-2xl">
+                                    <section class="font-semibold text-sm text-flash-front mb-30">
+                                        <p>
+                                             Frente
+                                        </p>
+                                    </section>
+                                    <section class="content mb-30 ">
+                                        <p class="text-flash-pink font-bold text-2xl"> 
+                                            Do you could help me?
+                                        </p>
+                                    </section>
+                                    <section class="audio flex justify-center mb-10">
+                                        <div id="audio-front" class="button-audio p-4 bg-flash-pink rounded-full">
+                                            <img src="image/play-1003-svgrepo-com (1).svg" alt="" class="w-7 pr" id="img-card-front">
+                                        </div>
+                                    </section>
+                                    <section class="flex justify-end font-semibold text-sm text-flash-front">
+                                        <p>
+                                            Inglês
+                                        </p>
+                                    </section>
+                                </div>
+            
+                                <div id="card-back" class="flip-card-back w-6/8 md:w-4/8 flip-card shadow-lg bg-flash-blue p-8 rounded-2xl">
+                                    <section class="font-semibold text-sm text-flash-front mb-30">
+                                        <p>
+                                            Verso
+                                        </p>
+                                    </section>
+                                    <div class="flex flex-col gap-2">
+                                        <section class="content">
+                                            <p class="text-flash-description font-bold text-md"> 
+                                                Do you could help me ?
+                                            </p>
+                                        </section>
+                                        <section class="content mb-30">
+                                            <p class="text-white font-bold text-2xl"> 
+                                                Você poderia me ajudar ?
+                                            </p>
+                                        </section>
+                                    </div>
+                                    <section class="audio flex justify-center mb-10">
+                                        <div id="audio-back" class="button-audio p-4 bg-flash-pink rounded-full">
+                                            <img src="image/play-1003-svgrepo-com (1).svg" alt="" class="w-7 pr" id="img-card-back">
+                                        </div>
+                                    </section>
+                                    <section class="flex justify-end font-semibold text-sm text-flash-front">
+                                        <p>
+                                            Português
+                                        </p>
+                                    </section>
+                                </div> 
+                            </div>
+                    <!-- end list cards  -->
+                    </div>
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
 
                 </div>
+
             </div>
         </div>        
     </main>
