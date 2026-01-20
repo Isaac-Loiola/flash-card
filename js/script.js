@@ -3,9 +3,6 @@
 const style = document.createElement("style");
 style.type = "text/css";
 
-// Index for card loop animation
-let indexLoop = 0;
-
 //  front card flip animation 
 function animationFront () {
     // adding animation class
@@ -23,12 +20,12 @@ function animationFront () {
 }
 
 function hiddenButtons() {
+    style.innerHTML = '';
     setTimeout(() => {
         containerBTN.classList.remove('opacity-100')
         containerBTN.classList.add('opacity-0')
     }, 1);
     containerBTN.hidden = true;
-    style.innerHTML = '';
 }
 
 //  back card flip animation 
@@ -36,12 +33,22 @@ function animationBack () {
     style.innerHTML = '';
 }
 
+// object for add audio from card
+const player = new Audio();
+
 const containerCards = document.querySelector('.swiper-wrapper');
 containerCards.addEventListener('click', () =>{
     const frontCard = event.target.closest('.card-front');
     const backCard = event.target.closest('.card-back');
+    const audio = event.target.closest('.button-audio');
 
-    if(frontCard != null){
+    if(audio){
+        path =  audio.querySelector('.source-audio');
+        console.log(path.innerText);
+        player.src = path.innerText;
+        player.play();
+    }
+    else if(frontCard != null){
         animationFront();
     }
     else if(backCard != null){  
@@ -62,13 +69,10 @@ const badLevel = document.getElementById('ingles-level-bad');
 
 goodLevel.addEventListener('click', () => {
     hiddenButtons();
-    moreOneCountLoop();
-    console.log(indexLoop);
 });
 
 badLevel.addEventListener('click', () => {
     hiddenButtons();
-    moreOneCountLoop();
 });
 
 // -----------
