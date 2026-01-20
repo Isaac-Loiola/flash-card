@@ -60,14 +60,6 @@ const containerBTN = document.getElementById('container-buttons');
 const goodLevel = document.getElementById('ingles-level-good');
 const badLevel = document.getElementById('ingles-level-bad');
 
-function moreOneCountLoop () {
-    indexLoop += 1;
-}
-
-function resetCountLoop () {
-    indexLoop = 0;
-}
-
 goodLevel.addEventListener('click', () => {
     hiddenButtons();
     moreOneCountLoop();
