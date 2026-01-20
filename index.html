@@ -20,14 +20,32 @@
     
 </head>
 <body class="min-h-screen bg-flash-gray ">
-    <header class="w-full bg-white py-3 flex justify-center">
-        <img src="image/Borcelle (1).svg" alt="" class="w-14">
+    <header class="w-full bg-white py-3 flex justify-center font-inter">
+        <div class="w-2/4 flex justify-between items-center">
+            <section>
+                <img src="image/logo/logo-flip.png" alt="" class="w-14">
+            </section>
+            <section>
+                <ul class="text-flash-pink font-semibold flex gap-10">
+                    <li >
+                        <a class="border-b-2 border-white hover:border-flash-pink duration-300" href="#">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="border-b-2 border-white hover:border-flash-pink duration-300" href="#">Lições</a>
+                    </li>
+                    <li>
+                        <a class="border-b-2 border-white hover:border-flash-pink duration-300" href="#">Notas</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
     </header>
+
     <main class="py-12 flex flex-col items-center px-5 md:px-0">
         <div class="w-full  md:w-2/4 bg-white rounded-3xl px-5 py-10 md:p-12">
             <h1 class="font-inter font-bold text-2xl md:text-3xl text-flash-blue">Flash Card</h1>
             <p class="text-sm text-flash-description font-semibold mb-15">Dinâmica para memorização</p>
-            <div class="border border-flash-border rounded-sm h-220 py-20">
+            <div class="border border-flash-border rounded-sm h-215 py-20">
 
                 <div class="h-162  flip-card swiper">
                     <div class="swiper-wrapper">
@@ -46,7 +64,7 @@
                                          </p>
                                      </section>
                                      <section class="audio flex justify-center mb-10">
-                                         <div id="audio-front" class="button-audio p-4 bg-flash-pink rounded-full">
+                                         <div id="audio-front" class="button-audio p-4 bg-flash-pink rounded-full scale-100 duration-100">
                                              <img src="image/play.svg" alt="" class="w-7 pr img-sound">
                                              <p hidden class=" source-audio">../audio/0001.mp3</p>
                                          </div>
@@ -77,7 +95,7 @@
                                          </section>
                                      </div>
                                      <section class="audio flex justify-center mb-10">
-                                         <div id="audio-back" class="button-audio p-4 bg-flash-pink rounded-full" >
+                                         <div id="audio-back" class="button-audio p-4 bg-flash-pink rounded-full  scale-100 duration-100" >
                                              <img src="image/play.svg" alt="" class="w-7 pr img-sound">
                                              <p hidden class=" source-audio">../audio/0001.mp3</p>
 
@@ -105,7 +123,7 @@
                                          </p>
                                      </section>
                                      <section class="audio flex justify-center mb-10">
-                                         <div id="audio-front" class="button-audio p-4 bg-flash-pink rounded-full">
+                                         <div id="audio-front" class="button-audio p-4 bg-flash-pink rounded-full scale-100 duration-100">
                                              <img src="image/play.svg" alt="" class="w-7 pr" id="img-card-front">
                                              <p hidden class=" source-audio">../audio/0002.mp3</p>
                                          </div>
@@ -136,7 +154,7 @@
                                          </section>
                                      </div>
                                      <section class="audio flex justify-center mb-10">
-                                         <div id="audio-back" class="button-audio p-4 bg-flash-pink rounded-full">
+                                         <div id="audio-back" class="button-audio p-4 bg-flash-pink rounded-full scale-100 duration-100">
                                              <img src="image/play.svg" alt="" class="w-7 pr" id="img-card-back">
                                              <p hidden class=" source-audio">../audio/0002.mp3</p>
                                          </div>
@@ -164,7 +182,7 @@
                                          </p>
                                      </section>
                                      <section class="audio flex justify-center mb-10">
-                                         <div id="audio-front" class="button-audio p-4 bg-flash-pink rounded-full">
+                                         <div id="audio-front" class="button-audio p-4 bg-flash-pink rounded-full scale-100 duration-100">
                                              <img src="image/play.svg" alt="" class="w-7 pr img-sound">
                                              <p hidden class=" source-audio">../audio/0003.mp3</p>
                                          </div>
@@ -195,7 +213,7 @@
                                          </section>
                                      </div>
                                      <section class="audio flex justify-center mb-10">
-                                         <div id="audio-back" class="button-audio p-4 bg-flash-pink rounded-full">
+                                         <div id="audio-back" class="button-audio p-4 bg-flash-pink rounded-full scale-100 duration-100">
                                              <img src="image/play.svg" alt="" class="w-7 pr img-sound">
                                              <p hidden class=" source-audio">../audio/0003.mp3</p>
                                          </div>
@@ -223,7 +241,7 @@
                                          </p>
                                      </section>
                                      <section class="audio flex justify-center mb-10">
-                                         <div id="audio-front" class="button-audio p-4 bg-flash-pink rounded-full">
+                                         <div id="audio-front" class="button-audio p-4 bg-flash-pink rounded-full scale-100 duration-100">
                                              <img src="image/play.svg" alt="" class="w-7 pr img-sound">
                                              <p hidden class=" source-audio">../audio/0004.mp3</p>
                                          </div>
@@ -254,7 +272,7 @@
                                          </section>
                                      </div>
                                      <section class="audio flex justify-center mb-10">
-                                         <div id="audio-back" class="button-audio p-4 bg-flash-pink rounded-full">
+                                         <div id="audio-back" class="button-audio p-4 bg-flash-pink rounded-full scale-100 duration-100">
                                              <img src="image/play.svg" alt="" class="w-7 pr img-sound">
                                              <p hidden class=" source-audio">../audio/0004.mp3</p>
                                          </div>

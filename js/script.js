@@ -47,6 +47,13 @@ containerCards.addEventListener('click', () =>{
         console.log(path.innerText);
         player.src = path.innerText;
         player.play();
+        audio.classList.add('scale-110');
+        setTimeout(() => {
+            audio.classList.remove('scale-110');
+            // audio.classList.add('scale-100');
+
+            // audio.classList.remove('scale-115');
+        }, 150);
     }
     else if(frontCard != null){
         animationFront();
