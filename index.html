@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flash Card</title>
+    <title>Loye Card</title>
 
     <link rel="stylesheet" href="css/output.css">
     <link rel="stylesheet" href="css/flip.css">
     <script src="js/script.js" defer></script>
 
+    <link rel="shortcut icon" href="/image/logo/logo-flip.png" type="image/x-icon">
+
     <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
 />
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
@@ -32,7 +34,7 @@
                             <!-- cards -->
                         <div class="swiper-slide pt-15">
                              <div value="0" class="flip-card-inner w-full flex flex-col items-center">
-                                 <div id="card-front" class="flip-card-front w-6/8 md:w-5/8 flip-card shadow-lg bg-white p-8 rounded-2xl">
+                                 <div id="card-front" class="card-front flip-card-front w-6/8 md:w-5/8 flip-card shadow-lg bg-white p-8 rounded-2xl">
                                      <section class="font-semibold text-sm text-flash-front mb-30">
                                          <p>
                                              Frente
@@ -55,7 +57,7 @@
                                      </section>
                                  </div>
          
-                                 <div id="card-back" class="flip-card-back w-6/8 md:w-5/8 flip-card shadow-lg bg-flash-blue p-8 rounded-2xl">
+                                 <div id="card-back" class="card-back flip-card-back w-6/8 md:w-5/8 flip-card shadow-lg bg-flash-blue p-8 rounded-2xl">
                                      <section class="font-semibold text-sm text-flash-front mb-30">
                                          <p>
                                              Verso
@@ -88,7 +90,7 @@
                         </div>
                         <div class="swiper-slide py-10">
                              <div class="flip-card-inner w-full flex flex-col items-center">
-                                 <div id="card-front" class="flip-card-front w-6/8 md:w-5/8 flip-card shadow-lg bg-white p-8 rounded-2xl">
+                                 <div id="card-front" class="card-front flip-card-front w-6/8 md:w-5/8 flip-card shadow-lg bg-white p-8 rounded-2xl">
                                      <section class="font-semibold text-sm text-flash-front mb-30">
                                          <p>
                                               Frente
@@ -111,7 +113,7 @@
                                      </section>
                                  </div>
              
-                                 <div id="card-back" class="flip-card-back w-6/8 md:w-5/8 flip-card shadow-lg bg-flash-blue p-8 rounded-2xl">
+                                 <div id="card-back" class="card-back flip-card-back w-6/8 md:w-5/8 flip-card shadow-lg bg-flash-blue p-8 rounded-2xl">
                                      <section class="font-semibold text-sm text-flash-front mb-30">
                                          <p>
                                              Verso
@@ -146,10 +148,10 @@
                     </div>
                 </div>
                 <div id="container-buttons" hidden class=" button opacity-0 transition-opacity duration-500 flex justify-center gap-10">
-                    <button name="good" value="1" class="ingles-level bg-flash-blue flex font-inter md:text-lg items-center font-semibold gap-2 text-white px-6 py-3 hover:scale-103 hover:bg-flash-blur-hover duration-300 rounded-4xl">
+                    <button name="good" value="1"  id="ingles-level-good" class="ingles-level bg-flash-blue flex font-inter md:text-lg items-center font-semibold gap-2 text-white px-6 py-3 hover:scale-103 hover:bg-flash-blur-hover duration-300 rounded-4xl">
                         <img src="image/icons/face-smile.svg" alt="smile-face" class="w-7"> Bom
                     </butt>
-                    <button name="bad" value="0" class="ingles-level bg-flash-blue flex font-inter md:text-lg items-center font-semibold gap-2 text-white px-6 py-3 hover:scale-103 hover:bg-flash-blur-hover duration-300 rounded-4xl">
+                    <button name="bad" value="0" id="ingles-level-bad" class="ingles-level bg-flash-blue flex font-inter md:text-lg items-center font-semibold gap-2 text-white px-6 py-3 hover:scale-103 hover:bg-flash-blur-hover duration-300 rounded-4xl">
                         <img src="image/icons/face-frown.svg" alt="smile-face" class="w-7"> Putz!
                     </button>
                 </div>
