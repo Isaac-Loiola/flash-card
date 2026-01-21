@@ -10,13 +10,13 @@ class Card{
 
     private $pdo;
 
-    function __contruct(){
+    function __construct(){
         $this->pdo = getConnection();
     }
 
     function listar() : array{
-        $sql = "select * from cards";
-        $cmd = $this->pdo->prepare($sql);
+        $sql = "select * from cards";       
+        $cmd  = $this->pdo->prepare($sql);
         $cmd->execute();
         $data = $cmd->fetchAll();
         if(count($data) <= 0){

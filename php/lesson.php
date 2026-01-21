@@ -1,0 +1,140 @@
+<?php 
+include 'class/card.php';
+
+    $card = new Card();
+    $cards = $card->listar();
+?>
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loye Card</title>
+
+    <link rel="stylesheet" href="../css/output.css">
+    <link rel="stylesheet" href="../css/flip.css">
+    <script src="../js/script.js" defer></script>
+
+    <link rel="shortcut icon" href="../image/logo/logo-flip.png" type="image/x-icon">
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    
+</head>
+<body class="min-h-screen bg-flash-gray ">
+    <header class="w-full bg-white py-3 flex justify-center font-inter">
+        <div class="w-2/4 flex justify-between items-center">
+            <section>
+                <img src="../image/logo/logo-flip.png" alt="" class="w-14">
+            </section>
+            <section>
+                <ul class="text-flash-pink font-semibold flex gap-10">
+                    <li >
+                        <a class="border-b-2 border-white hover:border-flash-pink duration-300" href="#">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="border-b-2 border-white hover:border-flash-pink duration-300" href="#">Lições</a>
+                    </li>
+                    <li>
+                        <a class="border-b-2 border-white hover:border-flash-pink duration-300" href="#">Notas</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </header>
+
+    <main class="py-12 flex flex-col items-center px-5 md:px-0">
+        <div class="w-full  md:w-2/4 bg-white rounded-3xl px-5 py-10 md:p-12">
+            <h1 class="font-inter font-bold text-2xl md:text-3xl text-flash-blue">Flash Card</h1>
+            <p class="text-sm text-flash-description font-semibold mb-15">Dinâmica para memorização</p>
+            <div class="border border-flash-border rounded-sm h-215 py-20">
+
+                <div class="h-162  flip-card swiper">
+                    <div class="swiper-wrapper">
+                            <!-- cards -->
+                        <?php foreach($cards as $c):?>
+                            <div class="swiper-slide pt-15">
+                                <div value="0" class="flip-card-inner w-full flex flex-col items-center">
+                                    <div id="card-front" class="card-front flip-card-front w-6/8 md:w-5/8 flip-card shadow-lg bg-white p-8 rounded-2xl">
+                                        <section class="font-semibold text-sm text-flash-front mb-30">
+                                            <p>
+                                                Frente
+                                            </p>
+                                        </section>
+                                        <section class="content mb-25 ">
+                                            <p class="text-flash-pink font-bold text-2xl w-full"> 
+                                                <?= $c['palavra_en'] ?>
+                                            </p>
+                                        </section>
+                                        <section class="audio flex justify-center mb-10">
+                                            <div id="audio-front" class="button-audio p-4 bg-flash-pink rounded-full scale-100 duration-100">
+                                                <img src="../image/play.svg" alt="" class="w-7 pr img-sound">
+                                                <p hidden class=" source-audio"><?= $c['audio'] ?></p>
+                                            </div>
+                                        </section>
+                                        <section class="flex justify-end font-semibold text-sm text-flash-front">
+                                            <p>
+                                                Inglês
+                                            </p>
+                                        </section>
+                                    </div>
+            
+                                    <div id="card-back" class="card-back flip-card-back w-6/8 md:w-5/8 flip-card shadow-lg bg-flash-blue p-8 rounded-2xl">
+                                        <section class="font-semibold text-sm text-flash-front mb-30">
+                                            <p>
+                                                Verso
+                                            </p>
+                                        </section>
+                                        <div class="flex flex-col gap-2">
+                                            <section class="content">
+                                                <p class="text-flash-description font-bold text-md w-full"> 
+                                                    <?= $c['palavra_en'] ?>
+                                                </p>
+                                            </section>
+                                            <section class="content mb-25">
+                                                <p class="text-white font-bold text-2xl w-full"> 
+                                                    <?= $c['palavra_pt'] ?>
+                                                </p>
+                                            </section>
+                                        </div>
+                                        <section class="audio flex justify-center mb-10">
+                                            <div id="audio-back" class="button-audio p-4 bg-flash-pink rounded-full  scale-100 duration-100" >
+                                                <img src="../image/play.svg" alt="" class="w-7 pr img-sound">
+                                                <p hidden class=" source-audio"><?= $c['audio'] ?></p>
+
+                                            </div>
+                                        </section>
+                                        <section class="flex justify-end font-semibold text-sm text-flash-front">
+                                            <p>
+                                                Português
+                                            </p>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach;?>
+
+
+                    
+                    <!-- end list cards  -->
+                    </div>
+                </div>
+                <div id="container-buttons" hidden class=" button opacity-0 transition-opacity duration-500 flex justify-center gap-10">
+                    <button name="good" value="1"  id="ingles-level-good" class="ingles-level bg-flash-blue flex font-inter md:text-lg items-center font-semibold gap-2 text-white px-6 py-3 hover:scale-103 hover:bg-flash-blur-hover duration-300 rounded-4xl">
+                        <img src="../image/icons/face-smile.svg" alt="smile-face" class="w-7"> Bom
+                    </butt>
+                    <button name="bad" value="0" id="ingles-level-bad" class="ingles-level bg-flash-blue flex font-inter md:text-lg items-center font-semibold gap-2 text-white px-6 py-3 hover:scale-103 hover:bg-flash-blur-hover duration-300 rounded-4xl">
+                        <img src="../image/icons/face-frown.svg" alt="smile-face" class="w-7"> Putz!
+                    </button>
+                </div>
+            </div>
+        </div>        
+    </main>
+</body>
+</html>  
